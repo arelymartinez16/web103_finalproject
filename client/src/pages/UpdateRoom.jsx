@@ -44,7 +44,7 @@ const UpdateRoomPage = () => {
 
     const updatedFormData = {
         ...formData,
-        monthlyrent: parseFloat(formData.monthlyrent),
+        monthlyrent: parseFloat(formData.monthlyRent),
     };
 
     try {
@@ -104,8 +104,8 @@ const UpdateRoomPage = () => {
           <label className="block text-sm font-medium text-gray-700">Lease Term</label>
           <input
             type="text"
-            name="leaseterm"
-            value={formData.leaseterm}
+            name="leaseTerm"
+            value={formData.leaseTerm}
             onChange={handleChange}
             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
             required
@@ -115,8 +115,8 @@ const UpdateRoomPage = () => {
           <label className="block text-sm font-medium text-gray-700">Monthly Rent</label>
           <input
             type="number"
-            name="monthlyrent"
-            value={formData.monthlyrent}
+            name="monthlyRent"
+            value={formData.monthlyRent}
             onChange={handleChange}
             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
             required
