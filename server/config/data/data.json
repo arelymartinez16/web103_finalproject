@@ -1,0 +1,50 @@
+[
+    {
+        "description": "Bright and spacious apartment close to campus.",
+        "address": "789 Maple St",
+        "amenities": "WiFi, Laundry, Parking, Gym",
+        "leaseTerm": "12 months",
+        "monthlyRent": 750.00,
+        "available_date": "2024-01-15",
+        "type": "Apartment",
+        "location": "Maplewood, CA",
+        "status": "available",
+        "img_url": "path/to/photo1.jpg"
+    },
+    {
+        "description": "Comfortable house in a quiet neighborhood.",
+        "address": "456 Pine St",
+        "amenities": "Air Conditioning, Heating, Security",
+        "leaseTerm": "6 months",
+        "monthlyRent": 650.00,
+        "available_date": "2024-02-01",
+        "type": "House",
+        "location": "Pineville, TX",
+        "status": "available",
+        "img_url": "path/to/photo2.jpg"
+    },
+    {
+        "description": "Townhouse with spacious common areas and backyard.",
+        "address": "123 Oak Ave",
+        "amenities": "Pool, Gym, WiFi, Laundry",
+        "leaseTerm": "Month-to-month",
+        "monthlyRent": 850.00,
+        "available_date": "2024-03-01",
+        "type": "Townhouse",
+        "location": "Oaktown, FL",
+        "status": "available",
+        "img_url": "path/to/photo3.jpg"
+    },
+    {
+        "description": "Modern downtown apartment with all amenities.",
+        "address": "1010 Cedar Blvd",
+        "amenities": "Elevator, Parking, 24/7 Security",
+        "leaseTerm": "12 months",
+        "monthlyRent": 950.00,
+        "available_date": "2024-04-01",
+        "type": "Apartment",
+        "location": "Downtown, NY",
+        "status": "available",
+        "img_url": "path/to/photo4.jpg"
+    }
+]
