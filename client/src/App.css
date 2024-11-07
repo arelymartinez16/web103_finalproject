@@ -1,3 +1,32 @@
+.header {
+  width: 100%;
+  color: #373D3F;
+  text-align: center;
+}
+
+.headerBtn {
+  margin-bottom: 50px;
+  margin-right: 10px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  color:373D3F;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.headerBtn:hover {
+  background-color: #97bfd8;
+  transition: all .7s ease;
+  -webkit-transition: all .7s ease;
+}
+
 .card {
   border: 1px solid #ccc;
   border-radius: 8px;

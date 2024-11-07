@@ -4,7 +4,6 @@ CodePath WEB103 Final Project
 
 Designed and developed by: Arely Martinez, Chau Anh Nguyen, Mary Ramirez
 
-
 🔗 Link to deployed app:
 
 ## About
@@ -43,13 +42,17 @@ Users can log out with one click to ensure their information remains secure.
 
 Users can set up personal profiles to provide information about themselves.
 
-### Room Rental Listing Management
+### Room Rental Listing Management ✅
 
 Users can create, modify, and remove room rental listings easily. They can post new listings, edit existing ones to update details like price or description, and delete listings once the room is rented.
 
-### Browse Available Room Listings
+<img src='./client/src/assets/room-rental-listing-management.gif' title='Video Walkthrough' width='' alt='Room Rental Listing Management Walkthrough' />
+
+### Browse Available Room Listings ✅
 
 Users can view a list of all available room rentals on the platform.
+
+<img src='./client/src/assets/browse-available-room-listings.gif' title='Video Walkthrough' width='' alt='Browse Available Room Listings Walkthrough' />
 
 ### Filter Room Listings by Price and Location
 
@@ -59,9 +62,11 @@ Users can apply filters to narrow down their search results based on preferences
 
 Users can bookmark listings for easy access later.
 
-### View Detailed Listing Information
+### View Detailed Listing Information ✅
 
 Users can click on listings to see in-depth information, including images, descriptions, price, and contact information.
+
+<img src='./client/src/assets/view-detailed-listing-information.gif' title='Video Walkthrough' width='' alt='View Detailed Room Listing Information Walkthrough' />
 
 ## Installation Instructions
 
