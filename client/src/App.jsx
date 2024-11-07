@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import RoomListingDetailPage from './pages/RoomListingDetailPage'
+import Home from './pages/Home'
 import './App.css'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Home />}></Route>
         <Route path="/:id" element={<RoomListingDetailPage />}></Route>
       </Routes>
     </>
