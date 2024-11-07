@@ -9,7 +9,7 @@
         "type": "Apartment",
         "location": "Maplewood, CA",
         "status": "available",
-        "img_url": "path/to/photo1.jpg"
+        "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyEurn5eMPhDmV69rRG09osegxXpcLDk4zkg&s"
     },
     {
         "description": "Comfortable house in a quiet neighborhood.",
@@ -21,7 +21,7 @@
         "type": "House",
         "location": "Pineville, TX",
         "status": "available",
-        "img_url": "path/to/photo2.jpg"
+        "img_url": "https://live.staticflickr.com/2304/32489556000_6b45521638_b.jpg"
     },
     {
         "description": "Townhouse with spacious common areas and backyard.",
@@ -33,7 +33,7 @@
         "type": "Townhouse",
         "location": "Oaktown, FL",
         "status": "available",
-        "img_url": "path/to/photo3.jpg"
+        "img_url": "https://i2.pickpik.com/photos/767/201/82/vacation-house-florida-summer-preview.jpg"
     },
     {
         "description": "Modern downtown apartment with all amenities.",
@@ -45,6 +45,6 @@
         "type": "Apartment",
         "location": "Downtown, NY",
         "status": "available",
-        "img_url": "path/to/photo4.jpg"
+        "img_url": "https://img.goodfon.com/original/3555x2000/7/97/luxury-apartments-manhattan.jpg"
     }
 ]
