@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  color: #373D3F;
+  color: #373d3f;
   text-align: center;
 }
 
@@ -16,15 +16,15 @@ button {
   font-size: 15px;
   font-weight: 500;
   font-family: inherit;
-  color:373D3F;
+  color: 373D3F;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
 .headerBtn:hover {
   background-color: #97bfd8;
-  transition: all .7s ease;
-  -webkit-transition: all .7s ease;
+  transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
 }
 
 .card {
