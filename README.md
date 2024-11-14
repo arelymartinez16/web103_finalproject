@@ -30,13 +30,17 @@ Backend:Node.js, Express.js, PostgreSQL
 
 Users can create a new account by providing necessary details like name, email, and password.
 
-### User Login
+### User Login ✅
 
 Users can securely log into their accounts to view room listings, manage their profiles, and post new listings.
 
-### User Logout
+<img src='./client/src/assets/login.gif' title='Video Walkthrough' width='' alt='Logging in to page' />
+
+### User Logout ✅
 
 Users can log out with one click to ensure their information remains secure.
+
+<img src="./client/src/assets/logout.gif" title="Video Walkthrough" width="" alt="Logging out">
 
 ### Create User Profile
 

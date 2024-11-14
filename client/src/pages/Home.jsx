@@ -5,6 +5,8 @@ import { getRooms } from "../services/RoomsAPI.jsx";
 
 const Home = () => {
     const [rooms, setRooms] = useState([]);
+    const [user, setUser] = useState(null);
+    const API_URL = 'http://localhost:3001';
 
     useEffect(() => {
         const fetchRooms = async () => {
@@ -16,8 +18,24 @@ const Home = () => {
         }
         };
 
+        // const getUser = async () => {
+        //     const response = await fetch(`${API_URL}/auth/login/success`, { credentials: 'include' });
+        //     if (response.ok) {
+        //       const json = await response.json();
+        //       setUser(json.user); 
+        //       console.log('User data:', json.user);
+        //     }
+        // };
+
+        // getUser();
         fetchRooms();
     }, []);
+
+    const logout = async () => {
+        const url = `${API_URL}/auth/logout`;
+        await fetch(url, { credentials: 'include' });
+        window.location.href = '/'; 
+    };
 
     return (
         <>

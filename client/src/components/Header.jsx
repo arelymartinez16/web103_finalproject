@@ -6,6 +6,7 @@ const Header = () => {
             <h1>RoomMateLink</h1>
             <Link to="/"><button className="headerBtn">Explore Rooms</button></Link>
             <Link to="/room/new"><button className="headerBtn"> + Add Room </button></Link>
+            <Link to="/login"><button className="headerBtn">Log Out</button></Link>
         </div>
     )
 }
