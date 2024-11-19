@@ -67,9 +67,15 @@ const Home = () => {
 
                 {/* Rooms Display Section */}
                 <div className="flex flex-wrap justify-center">
-                    {filteredRooms.map((room) => (
-                        <RoomCard key={room.room_id} room={room} />
-                    ))}
+                    {filteredRooms.length > 0 ? (
+                        filteredRooms.map((room) => (
+                            <RoomCard key={room.room_id} room={room} />
+                        ))
+                    ) : (
+                        <p className="text-gray-500 text-lg mt-4">
+                            No rooms found matching your filters.
+                        </p>
+                    )}
                 </div>
             </div>
         </>

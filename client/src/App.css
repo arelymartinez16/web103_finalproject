@@ -115,3 +115,14 @@ button {
 .modal-content button:hover {
   background-color: #e60000;
 }
+
+.text-gray-500 {
+  color: #6b7280;
+}
+.text-lg {
+  font-size: 1.125rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+
