@@ -7,6 +7,7 @@ import { GitHub } from './config/auth.js'
 
 import roomRoutes from './routes/rooms.js'
 import userRoomRoutes from './routes/user_rooms.js';
+import favoriteRoutes from './routes/favorites.js'
 
 import authRoutes from './routes/auth.js'
 
@@ -47,6 +48,7 @@ app.get('/', (req, res) => {
 app.use('/rooms', roomRoutes)
 app.use('/auth', authRoutes)
 app.use('/users_rooms', userRoomRoutes)
+app.use('/favorites', favoriteRoutes)
 
 const PORT = process.env.PORT || 3001
 
