@@ -4,11 +4,13 @@ import { getRoom, deleteRoom } from "../services/RoomsAPI.jsx";
 import Card from "../components/Card.jsx";
 import "../App.css"
 import Header from "../components/Header.jsx";
+import ConfirmationModal from "../components/ConfirmationModal.jsx";
 
 const RoomListingDetailPage = () => {            
     const { id } = useParams();
     const navigate = useNavigate();
     const [room, setRoom] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleDelete = async () => {
         try {
@@ -18,6 +20,14 @@ const RoomListingDetailPage = () => {
           console.error("Error deleting room:", error);
         }
     };
+
+    const handleConfirmDelete = () => {
+        setIsModalOpen(true);
+    }
+
+    const handleCancelDelete = () => {
+        setIsModalOpen(false);
+    }
 
     useEffect(() => {
         const fetchRoom = async () => {
@@ -60,13 +70,18 @@ const RoomListingDetailPage = () => {
                         Edit
                     </Link>
                     <button
-                        onClick={handleDelete}
+                        onClick={handleConfirmDelete}
                         className="bg-red-500 text-white font-bold py-2 px-4 rounded-md hover:bg-red-600"
                     >
                     Delete
                     </button>
                 </div>
             </div>
+            <ConfirmationModal 
+                isOpen={isModalOpen} 
+                onClose={handleCancelDelete} 
+                onConfirm={handleDelete} 
+            />
         </>    
     )
 };

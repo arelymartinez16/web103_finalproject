@@ -50,7 +50,7 @@ Users can set up personal profiles to provide information about themselves.
 
 Users can create, modify, and remove room rental listings easily. They can post new listings, edit existing ones to update details like price or description, and delete listings once the room is rented.
 
-<img src='./client/src/assets/room-rental-listing-management.gif' title='Video Walkthrough' width='' alt='Room Rental Listing Management Walkthrough' />
+<img src='./client/src/assets/room-rental-listing-management-update.gif' title='Video Walkthrough' width='' alt='Room Rental Listing Management Walkthrough' />
 
 ### Browse Available Room Listings ✅
 
