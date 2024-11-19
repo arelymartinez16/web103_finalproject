@@ -8,6 +8,7 @@ import CreateRoomPage from './pages/CreateRoom'
 import UpdateRoomPage from './pages/UpdateRoom'
 import Login from './pages/Login'
 import Favorites from './pages/Favorites'
+import Profile from './pages/Profile'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -58,6 +59,10 @@ function App() {
     {
       path: '/favorites',
       element: user && user.user_id ? <Favorites user={user} /> : <Login api_url={API_URL} />
+    },
+    {
+      path: '/profile/:id',
+      element: user && user.user_id ? <Profile user_id={user.user_id} /> : <Login api_url={API_URL} />
     }
   ]);
 

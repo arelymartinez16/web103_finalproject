@@ -3,9 +3,8 @@ import Header from "../components/Header.jsx";
 import RoomCard from "../components/RoomCard.jsx";
 import { getRooms } from "../services/RoomsAPI.jsx";
 
-const Home = () => {
+const Home = ({ user }) => {
     const [rooms, setRooms] = useState([]);
-    const [user, setUser] = useState(null);
     const API_URL = 'http://localhost:3001';
 
     useEffect(() => {
@@ -39,7 +38,7 @@ const Home = () => {
 
     return (
         <>
-            <Header />
+            <Header user_id={user.user_id} />
             <div className="container mx-auto p-4">
                 <div className="flex flex-wrap justify-center">
                 {rooms.map((room) => (
