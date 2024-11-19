@@ -5,7 +5,6 @@ import { getRooms } from "../services/RoomsAPI.jsx";
 
 const Home = ({ user }) => {
     const [rooms, setRooms] = useState([]);
-    // const [user, setUser] = useState(null);
     const API_URL = 'http://localhost:3001';
 
     useEffect(() => {

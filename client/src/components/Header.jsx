@@ -1,6 +1,22 @@
+import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
 const Header = ({ user_id }) => {
+    // const [user, setUser] = useState(null);
+
+    // useEffect(() => {
+    //     const getUser = async () => {
+    //         const response = await fetch('http://localhost:3001/api/user');
+    //         if (response.ok) {
+    //             const data = await response.json();
+    //             // setUser(data.user);
+    //             console.log('User data inside of header component:', data.user);
+    //         }
+    //     };
+
+    //     getUser();
+    // }, []);
+
     return (
         <div className="header">
             <h1>RoomMateLink</h1>
