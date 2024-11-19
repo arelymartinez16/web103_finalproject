@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { getRoom, deleteRoom } from "../services/RoomsAPI.jsx";
 import Card from "../components/Card.jsx";
 import Header from "../components/Header.jsx";
+import ConfirmationModal from "../components/ConfirmationModal.jsx";
 import "../App.css";
 
 const RoomListingDetailPage = () => {
@@ -11,9 +12,18 @@ const RoomListingDetailPage = () => {
   const [room, setRoom] = useState(null);
   const [isRoomInFavorites, setIsRoomInFavorites] = useState(false);
   const [message, setMessage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [user, setUser] = useState(null);
   const API_URL = 'http://localhost:3001';
+
+  const handleConfirmDelete = () => {
+    setIsModalOpen(true);
+  }
+
+  const handleCancelDelete = () => {
+      setIsModalOpen(false);
+  }
 
   useEffect(() => {
     const getUser = async () => {
@@ -142,7 +152,7 @@ const RoomListingDetailPage = () => {
             Edit
           </Link>
           <button
-            onClick={handleDelete}
+            onClick={handleConfirmDelete}
             className="bg-red-500 text-white font-bold py-2 px-4 rounded-md hover:bg-red-600"
           >
             Delete
@@ -157,6 +167,11 @@ const RoomListingDetailPage = () => {
           </button>
         </div>
       </div>
+      <ConfirmationModal 
+        isOpen={isModalOpen} 
+        onClose={handleCancelDelete} 
+        onConfirm={handleDelete} 
+      />
       {renderMessage()}
     </>
   );
