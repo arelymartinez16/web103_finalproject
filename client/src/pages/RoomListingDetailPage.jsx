@@ -2,88 +2,179 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { getRoom, deleteRoom } from "../services/RoomsAPI.jsx";
 import Card from "../components/Card.jsx";
-import "../App.css"
 import Header from "../components/Header.jsx";
 import ConfirmationModal from "../components/ConfirmationModal.jsx";
+import "../App.css";
 
-const RoomListingDetailPage = () => {            
-    const { id } = useParams();
-    const navigate = useNavigate();
-    const [room, setRoom] = useState(null);
-    const [isModalOpen, setIsModalOpen] = useState(false);
+const RoomListingDetailPage = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [room, setRoom] = useState(null);
+  const [isRoomInFavorites, setIsRoomInFavorites] = useState(false);
+  const [message, setMessage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handleDelete = async () => {
-        try {
-          await deleteRoom(id);
-          navigate("/");
-        } catch (error) {
-          console.error("Error deleting room:", error);
-        }
+  const [user, setUser] = useState(null);
+  const API_URL = 'http://localhost:3001';
+
+  const handleConfirmDelete = () => {
+    setIsModalOpen(true);
+  }
+
+  const handleCancelDelete = () => {
+      setIsModalOpen(false);
+  }
+
+  useEffect(() => {
+    const getUser = async () => {
+      const response = await fetch(`${API_URL}/auth/login/success`, { credentials: 'include' });
+      if (response.ok) {
+        const json = await response.json();
+        setUser(json.user); 
+        console.log('User data:', json.user);
+      }
     };
 
-    const handleConfirmDelete = () => {
-        setIsModalOpen(true);
-    }
+    getUser();
+  }, []);
 
-    const handleCancelDelete = () => {
-        setIsModalOpen(false);
-    }
+  
+  useEffect(() => {
+    const fetchRoomData = async () => {
+      try {
+        const roomData = await getRoom(id);
+        setRoom(roomData);
+      } catch (error) {
+        console.error("Error fetching room:", error);
+      }
+    };
 
-    useEffect(() => {
-        const fetchRoom = async () => {
-            const response = await getRoom(id);
-            setRoom(response);
+    const fetchFavoriteStatus = async () => {
+      try {
+        const response = await fetch(`${API_URL}/favorites/check/${id}`);
+        if (response.ok) {
+          const data = await response.json();
+          setIsRoomInFavorites(data.isFavorite);
+        } else {
+          console.error(`Failed to fetch favorite status: ${response.status}`);
         }
+      } catch (error) {
+        console.error("Error checking favorite status:", error);
+      }
+    };
 
-        fetchRoom();
-    }, [id]);
+    fetchRoomData();
+    fetchFavoriteStatus();
+  }, [id]);
 
-    if (!room) {
-        return <div>Error loading room details. Please try again later.</div>;
+  const handleToggleFavorite = async () => {
+    try {
+      const response = await fetch("http://localhost:3001/favorites/toggle", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ user_id: user.user_id, room_id: parseInt(id) }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setIsRoomInFavorites((prev) => !prev);
+        setMessage(data.message);
+      } else {
+        console.error(`Failed to toggle favorite: ${response.status}`);
+        setMessage("Error toggling favorite.");
+      }
+    } catch (error) {
+      console.error("Error toggling favorite:", error);
+      setMessage("Error toggling favorite.");
     }
+  };
 
-    return (
-        <>
-            <Header />
-            <div className="room-detail">
-                <div className="room-detail-header">
-                    <img src={room.img_url} alt={room.title} className="room-image" />
-                    <Card>
-                        <p>Rent: {room.monthlyrent}</p>
-                        <p>Available: {room.status ? "Yes" : "No"}</p>
-                        <p>Type: {room.type}</p>
-                    </Card>
-                </div>
-                <Card title="Description">
-                    <p>{room.description}</p>
-                </Card>
-                <Card title="Amenities">
-                    <ul>
-                        <li>{room.amenities}</li>
-                    </ul>
-                </Card>
-                <Card title="Contact Information">
-                    <p>Placeholder</p>
-                </Card>
-                <div className="flex justify-between mt-4">
-                    <Link to={`/room/update/${id}`} className="bg-yellow-500 text-white font-bold py-2 px-4 rounded-md hover:bg-yellow-600">
-                        Edit
-                    </Link>
-                    <button
-                        onClick={handleConfirmDelete}
-                        className="bg-red-500 text-white font-bold py-2 px-4 rounded-md hover:bg-red-600"
-                    >
-                    Delete
-                    </button>
-                </div>
-            </div>
-            <ConfirmationModal 
-                isOpen={isModalOpen} 
-                onClose={handleCancelDelete} 
-                onConfirm={handleDelete} 
-            />
-        </>    
-    )
+  const handleDelete = async () => {
+    try {
+      await deleteRoom(id);
+      navigate("/");
+    } catch (error) {
+      console.error("Error deleting room:", error);
+    }
+  };
+
+  const renderMessage = () => {
+    if (message) {
+      return (
+        <div className="modal">
+          <div className="modal-content">
+            <p>{message}</p>
+            <button
+              onClick={() => setMessage(null)}
+              className="bg-red-500 text-white py-2 px-4 rounded-md"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return null;
+  };
+
+  if (!room) {
+    return <div>Loading room details...</div>;
+  }
+
+  return (
+    <>
+      <Header />
+      <div className="room-detail">
+        <div className="room-detail-header">
+          <img src={room.img_url} alt={room.title} className="room-image" />
+          <Card>
+            <p>Rent: {room.monthlyrent}</p>
+            <p>Available: {room.status ? "Yes" : "No"}</p>
+            <p>Type: {room.type}</p>
+          </Card>
+        </div>
+        <Card title="Description">
+          <p>{room.description}</p>
+        </Card>
+        <Card title="Amenities">
+          <ul>
+            <li>{room.amenities}</li>
+          </ul>
+        </Card>
+        <Card title="Contact Information">
+          <p>Placeholder</p>
+        </Card>
+        <div className="flex justify-between mt-4">
+          <Link
+            to={`/room/update/${id}`}
+            className="bg-yellow-500 text-white font-bold py-2 px-4 rounded-md hover:bg-yellow-600"
+          >
+            Edit
+          </Link>
+          <button
+            onClick={handleConfirmDelete}
+            className="bg-red-500 text-white font-bold py-2 px-4 rounded-md hover:bg-red-600"
+          >
+            Delete
+          </button>
+          <button
+            onClick={handleToggleFavorite}
+            className={`font-bold text-white py-2 px-4 rounded-md ${
+              isRoomInFavorites ? "bg-red-500 hover:bg-red-600" : "bg-green-500 hover:bg-green-600"
+            }`}
+          >
+            {isRoomInFavorites ? "Remove from Favorites" : "Add to Favorites"}
+          </button>
+        </div>
+      </div>
+      <ConfirmationModal 
+        isOpen={isModalOpen} 
+        onClose={handleCancelDelete} 
+        onConfirm={handleDelete} 
+      />
+      {renderMessage()}
+    </>
+  );
 };
 
 export default RoomListingDetailPage;

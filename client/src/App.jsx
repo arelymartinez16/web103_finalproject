@@ -7,6 +7,7 @@ import './App.css'
 import CreateRoomPage from './pages/CreateRoom'
 import UpdateRoomPage from './pages/UpdateRoom'
 import Login from './pages/Login'
+import Favorites from './pages/Favorites'
 import Profile from './pages/Profile'
 
 function App() {
@@ -54,6 +55,10 @@ function App() {
     {
       path: '/login',
       element: <Login api_url={API_URL} />
+    },
+    {
+      path: '/favorites',
+      element: user && user.user_id ? <Favorites user={user} /> : <Login api_url={API_URL} />
     },
     {
       path: '/profile/:id',

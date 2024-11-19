@@ -35,21 +35,6 @@ const Profile = () => {
 
         fetchProfileInfo();
     }, []);
-    // useEffect(() => {
-    //     const fetchFavorites = async () => {
-    //         try {
-    //             const response = await fetch(`${API_URL}/favorites/${user_id}`);
-    //             if (response.ok) {
-    //                 const json = await response.json();
-    //                 setFavorites(json);
-    //             }
-    //         } catch (error) {
-    //             console.error("Error fetching favorites:", error);
-    //         }
-    //     };
-
-    //     fetchFavorites();
-    // }, [user_id]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -97,11 +82,11 @@ const Profile = () => {
                     <div className="mb-4">
                         <label className="block text-sm font-medium text-gray-700">First Name</label>
                         <input
-                        type="text"
-                        name="first_name"
-                        value={profileInfo.first_name || ""}
-                        onChange={handleChange}
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+                            type="text"
+                            name="first_name"
+                            value={profileInfo.first_name || ""}
+                            onChange={handleChange}
+                            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
                         />
                     </div>
                     <div className="mb-4">
@@ -141,25 +126,7 @@ const Profile = () => {
                         Save
                     </button>
                 </div>
-                {/* <div className="bg-white p-4 rounded-lg shadow-md">
-                    <h2 className="text-2xl font-bold mb-4">User Information</h2>
-                    <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700">First Name</label>
-                        <input
-                        type="text"
-                        name="first_name"
-                        value={profileInfo.first_name}
-                        onChange={handleChange}
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
-                        />
-                </div> */}
             </div>
-            <h2>Favorites</h2>
-            {/* <ul>
-                {favorites.map((favorite) => (
-                    <li key={favorite.room_id}>{favorite.room_name}</li>
-                ))}
-            </ul> */}
         </>
     );
 }
