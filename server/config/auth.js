@@ -29,6 +29,21 @@ const verify = async (accessToken, refreshToken, profile, done) => {
             )
 
             const newUser = results.rows[0]
+            const profileResult = await pool.query('SELECT * FROM profile WHERE user_id = $1', [newUser.user_id]);
+
+            if (profileResult.rows.length === 0) {
+                // Create a new profile if it doesn't exist
+                const profileResults = await pool.query(
+                  `
+                    INSERT INTO profile (user_id)
+                    VALUES ($1)
+                  `,
+                  [newUser.user_id]
+                );
+
+                console.log('New profile created for user: ', profileResults.rows[0]);
+            }
+
             return done(null, newUser)            
         }
 

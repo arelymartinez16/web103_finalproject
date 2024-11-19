@@ -7,6 +7,7 @@ import './App.css'
 import CreateRoomPage from './pages/CreateRoom'
 import UpdateRoomPage from './pages/UpdateRoom'
 import Login from './pages/Login'
+import Profile from './pages/Profile'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -53,6 +54,10 @@ function App() {
     {
       path: '/login',
       element: <Login api_url={API_URL} />
+    },
+    {
+      path: '/profile/:id',
+      element: user && user.user_id ? <Profile user_id={user.user_id} /> : <Login api_url={API_URL} />
     }
   ]);
 
