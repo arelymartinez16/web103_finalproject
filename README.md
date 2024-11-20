@@ -86,9 +86,10 @@ Navigate to the project directory:
 Install dependencies:
    ```bash
    npm install
-   ``
+   ```
 Set up your environment variables:
    - Create a `.env.local` file in the `server` directory with your API keys and database credentials.
+     
      ```env
       PGUSER = ""
       PGHOST= ""
