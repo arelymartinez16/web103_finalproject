@@ -4,6 +4,8 @@ import { getRoom, deleteRoom } from "../services/RoomsAPI.jsx";
 import Card from "../components/Card.jsx";
 import Header from "../components/Header.jsx";
 import ConfirmationModal from "../components/ConfirmationModal.jsx";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../App.css";
 
 const RoomListingDetailPage = () => {
@@ -92,9 +94,19 @@ const RoomListingDetailPage = () => {
   const handleDelete = async () => {
     try {
       await deleteRoom(id);
-      navigate("/");
+      toast.success("Room deleted successfully", {
+        position: "bottom-right",
+        autoClose: 3000,
+      });
+      setTimeout(() => {
+        navigate("/");
+      }, 2000)
     } catch (error) {
       console.error("Error deleting room:", error);
+      toast.error("Error deleting room", {
+        position: "bottom-right",
+        autoClose: 3000,
+      });
     }
   };
 
@@ -173,6 +185,7 @@ const RoomListingDetailPage = () => {
         onClose={handleCancelDelete} 
         onConfirm={handleDelete} 
       />
+      <ToastContainer />
       {renderMessage()}
     </>
   );

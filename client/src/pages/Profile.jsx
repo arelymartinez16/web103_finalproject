@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Header from "../components/Header";
 
 const Profile = () => {
@@ -59,10 +61,16 @@ const Profile = () => {
                 body: JSON.stringify(profileInfo),
             }); 
             const data = await response.json();
-        //   setUser(data.user);
-            alert("Profile updated successfully!");
+            toast.success("Profile updated successfully.", {
+                position: "bottom-right",
+                autoClose: 3000,
+            });
         } catch (error) {
           console.error("Error updating profile:", error);
+          toast.error("Error updating profile.", {
+            position: "bottom-right",
+            autoClose: 3000,
+          });
         }
       };
 
@@ -127,6 +135,7 @@ const Profile = () => {
                     </button>
                 </div>
             </div>
+            <ToastContainer />
         </>
     );
 }
