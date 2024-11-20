@@ -77,20 +77,20 @@ Complete the checklist below detailing each baseline, custom, and stretch featur
 
 ### 1. What went well during this unit?
 
-[👉🏾👉🏾👉🏾 your answer here]
+During this unit, one thing that went really well was the teamwork. Everyone contributed their skills and ideas, which made the collaboration both productive and enjoyable. Communication within the team was clear, and we supported each other in overcoming challenges, ensuring that tasks were completed
 
 ### 2. What were some challenges your group faced in this unit?
 
-[👉🏾👉🏾👉🏾 your answer here]
+During this unit, our group faced challenges with developing the profile feature and ensuring it was smoothly integrated into the application. We also encountered issues with the favorites button. After adding a room to the favorites list, the button’s title correctly updated to “Remove from Favorites,” but navigating to other pages and returning to the room details caused the title to revert to “Add to Favorites,” even though the room was already in the favorites list. Addressing these issues required extensive debugging to ensure the functionality was consistent and reliable.
 
 ### 3. What were some of the highlights or achievements that you are most proud of in this project?
 
-[👉🏾👉🏾👉🏾 your answer here]
+We are proud of our ability to complete this website within the short time frame we were given. It was a challenging yet rewarding experience that demonstrated our teamwork, dedication, and ability to manage our time effectively.
 
 ### 4. Reflecting on your web development journey so far, how have you grown since the beginning of the course?
 
-[👉🏾👉🏾👉🏾 your answer here]
+Reflecting on my web development journey, We can see significant growth both in backend and frontend development since the beginning of the course. Initially, We had limited experience with web development, but over time, We have gained a deeper understanding of the technologies, tools, and best practices required to build full-stack applications.
 
 ### 5. Looking ahead, what are your goals related to web development, and what steps do you plan to take to achieve them?
 
-[👉🏾👉🏾👉🏾 your answer here]
+Looking ahead, our primary goal is to secure software engineering internships where we can apply our skills in real-world settings and gain valuable industry experience. We are also committed to continuing our journey as developers by building more fully functional, full-stack websites that push our technical abilities and creativity.
