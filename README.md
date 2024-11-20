@@ -26,9 +26,11 @@ Backend:Node.js, Express.js, PostgreSQL
 
 ## Features
 
-### User Sign Up
+### User Sign Up✅
 
-Users can create a new account by providing necessary details like name, email, and password.
+Users can create a new account by providing the github username and password.
+
+![SignUp](https://github.com/user-attachments/assets/f44314e5-abb6-4800-95ac-abbea64f8269)
 
 ### User Login ✅
 
@@ -58,9 +60,12 @@ Users can view a list of all available room rentals on the platform.
 
 <img src='./client/src/assets/browse-available-room-listings.gif' title='Video Walkthrough' width='' alt='Browse Available Room Listings Walkthrough' />
 
-### Filter Room Listings by Price and Location
+### Filter Room Listings by Price and Location✅
 
 Users can apply filters to narrow down their search results based on preferences.
+
+![filters](https://github.com/user-attachments/assets/929fbf37-8056-48e3-8656-1e87dee653e8)
+
 
 ### Save Favorite Listings ✅
 
