@@ -44,9 +44,17 @@ Users can log out with one click to ensure their information remains secure.
 
 <img src="./client/src/assets/logout.gif" title="Video Walkthrough" width="" alt="Logging out">
 
-### Create User Profile
+### Create User Profile ✅
 
 Users can set up personal profiles to provide information about themselves.
+
+<img src="./client/src/assets/profile.gif" title="Video Walkthrough" width="" alt="Logging out">
+
+### Toast Messages ✅
+
+Toast messages after the user creates a room listing, update their profile, update and delete a room.
+
+<img src='./client/src/assets/toast-messages.gif' title='Video Walkthrough' width='' alt='Toast Messages Walkthrough' />
 
 ### Room Rental Listing Management ✅
 
@@ -66,7 +74,6 @@ Users can apply filters to narrow down their search results based on preferences
 
 ![filters](https://github.com/user-attachments/assets/929fbf37-8056-48e3-8656-1e87dee653e8)
 
-
 ### Save Favorite Listings ✅
 
 Users can bookmark listings for easy access later.
@@ -82,41 +89,49 @@ Users can click on listings to see in-depth information, including images, descr
 ## Installation Instructions
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/arelymartinez16/web103_finalproject.git
    ```
 
 2. Navigate to the project directory:
+
    ```bash
    cd web103_finalproject
    ```
 
 3. Install dependencies:
+
    ```bash
    npm install
    ```
 
 4. Set up your environment variables:
+
    - Create a `.env.local` file in the `server` directory with your API keys and database credentials.
    - Example `.env.local` for the server:
+
      ```env
       PGUSER=""
       PGHOST= ""
       PGPASSWORD=""
       PGPORT= ""
       PGDATABASE=""
-      
-      
+
+
       GITHUB_CLIENT_ID= ""
       GITHUB_CLIENT_SECRET= ""
       SESSION_SECRET= ""
      ```
 
 5. Start the application:
+
    - To start the server:
+
      ```bash
      npm start
      ```
+
      This will run the server in development mode at `http://localhost:3001`.
 
    - To start the client (from the `client` directory):

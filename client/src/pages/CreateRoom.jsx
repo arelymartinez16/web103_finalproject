@@ -47,7 +47,6 @@ const CreateRoomPage = () => {
           navigate("/");
         }, 2000)
     } catch (error) {
-        // Handle error (e.g., show an error message)
         console.error("Error creating room:", error);
         toast.error("Failed to create room. Please try again.", {
           position: "bottom-right",
