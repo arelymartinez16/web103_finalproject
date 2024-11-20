@@ -3,7 +3,7 @@ import Header from "../components/Header.jsx";
 import RoomCard from "../components/RoomCard.jsx";
 import { getRooms } from "../services/RoomsAPI.jsx";
 
-const Home = () => {
+const Home = ({ user }) => {
     const [rooms, setRooms] = useState([]);
     const [filteredRooms, setFilteredRooms] = useState([]);
     const [locationFilter, setLocationFilter] = useState("");
@@ -39,7 +39,7 @@ const Home = () => {
 
     return (
         <>
-            <Header />
+            <Header user_id={user.user_id} />
             <div className="container mx-auto p-4">
                 {/* Filters Section */}
                 <div className="flex gap-4 mb-4">
