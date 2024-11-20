@@ -81,4 +81,46 @@ Users can click on listings to see in-depth information, including images, descr
 
 ## Installation Instructions
 
-[instructions go here]
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/arelymartinez16/web103_finalproject.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd web103_finalproject
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Set up your environment variables:
+   - Create a `.env.local` file in the `server` directory with your API keys and database credentials.
+   - Example `.env.local` for the server:
+     ```env
+      PGUSER=""
+      PGHOST= ""
+      PGPASSWORD=""
+      PGPORT= ""
+      PGDATABASE=""
+      
+      
+      GITHUB_CLIENT_ID= ""
+      GITHUB_CLIENT_SECRET= ""
+      SESSION_SECRET= ""
+     ```
+
+5. Start the application:
+   - To start the server:
+     ```bash
+     npm start
+     ```
+     This will run the server in development mode at `http://localhost:3001`.
+
+   - To start the client (from the `client` directory):
+     ```bash
+     npm run dev
+     ```
+     This will run the front-end app in development mode at `http://localhost:5173`.
