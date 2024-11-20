@@ -11,7 +11,7 @@ This unit, be sure to complete all tasks listed below. To complete a task, place
 - [ ] Update the status of issues in your project board as you complete them
 - [ ] In `readme.md`, check off the features you have completed in this unit by adding a ✅ emoji in front of their title
   - [ ] Under each feature you have completed, **include a GIF** showing feature functionality
-- [ ] In this document, complete the **Reflection** section below
+- [x] In this document, complete the **Reflection** section below
 - [ ] 🚩🚩🚩**Complete the Final Project Feature Checklist section below**, detailing each feature you completed in the project (ONLY include features you implemented, not features you planned)
 - [ ] 🚩🚩🚩**Record a GIF showing a complete run-through of your app** that displays all the components included in the **Final Project Feature Checklist** below
   - [ ] Include this GIF in the **Final Demo GIF** section below
@@ -76,21 +76,16 @@ Complete the checklist below detailing each baseline, custom, and stretch featur
 ## Reflection
 
 ### 1. What went well during this unit?
-
-[👉🏾👉🏾👉🏾 your answer here]
+During this unit, one thing that went really well was the teamwork. Everyone contributed their skills and ideas, which made the collaboration both productive and enjoyable. Communication within the team was clear, and we supported each other in overcoming challenges, ensuring that tasks were completed 
 
 ### 2. What were some challenges your group faced in this unit?
-
-[👉🏾👉🏾👉🏾 your answer here]
+During this unit, our group faced challenges with developing the profile feature and ensuring it was smoothly integrated into the application. We also encountered issues with the favorites button. After adding a room to the favorites list, the button’s title correctly updated to “Remove from Favorites,” but navigating to other pages and returning to the room details caused the title to revert to “Add to Favorites,” even though the room was already in the favorites list. Addressing these issues required extensive debugging to ensure the functionality was consistent and reliable.
 
 ### 3. What were some of the highlights or achievements that you are most proud of in this project?
-
-[👉🏾👉🏾👉🏾 your answer here]
+The fact that we were able to complete this website in the two weeks we were given. We were also proud to be able to present the project to other teams as well as the entire cohort.
 
 ### 4. Reflecting on your web development journey so far, how have you grown since the beginning of the course?
-
-[👉🏾👉🏾👉🏾 your answer here]
+We are proud of our ability to complete this website within the short time frame we were given. It was a challenging yet rewarding experience that demonstrated our teamwork, dedication, and ability to manage our time effectively. 
 
 ### 5. Looking ahead, what are your goals related to web development, and what steps do you plan to take to achieve them?
-
-[👉🏾👉🏾👉🏾 your answer here]
+Looking ahead, our primary goal is to secure software engineering internships where we can apply our skills in real-world settings and gain valuable industry experience. We are also committed to continuing our journey as developers by building more fully functional, full-stack websites that push our technical abilities and creativity.
