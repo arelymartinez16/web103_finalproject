@@ -39,7 +39,7 @@ Complete the checklist below detailing each baseline, custom, and stretch featur
   - [x] Dynamic frontend routes created with React Router
   - [x] Hierarchically designed React components
     - [x] Components broken down into categories, including Page and Component types
-    - [ ] Corresponding container components and presenter components as appropriate
+    - [x] Corresponding container components and presenter components as appropriate
 - [x] The project includes dynamic routes for both frontend and backend apps
 - [ ] The project is deployed on Railway with all pages and features working
 
