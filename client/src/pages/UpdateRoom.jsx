@@ -55,7 +55,6 @@ const UpdateRoomPage = () => {
         position: "bottom-right",
         autoClose: 3000,
       });
-      // navigate(`/room/${id}`);
       setTimeout(() => {
         navigate(`/room/${id}`);
       }, 3000); // Delay navigation to ensure toast shows

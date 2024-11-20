@@ -67,6 +67,10 @@ const Profile = () => {
             });
         } catch (error) {
           console.error("Error updating profile:", error);
+          toast.error("Error updating profile.", {
+            position: "bottom-right",
+            autoClose: 3000,
+          });
         }
       };
 
