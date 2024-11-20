@@ -45,7 +45,7 @@ const CreateRoomPage = () => {
         });
         setTimeout(() => {
           navigate("/");
-        }, 3000)
+        }, 2000)
     } catch (error) {
         // Handle error (e.g., show an error message)
         console.error("Error creating room:", error);

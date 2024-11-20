@@ -57,7 +57,7 @@ const UpdateRoomPage = () => {
       });
       setTimeout(() => {
         navigate(`/room/${id}`);
-      }, 3000); // Delay navigation to ensure toast shows
+      }, 2999); // Delay navigation to ensure toast shows
     } catch (error) {
       console.error("Error updating room:", error);
       toast.error("Error updating room", {
