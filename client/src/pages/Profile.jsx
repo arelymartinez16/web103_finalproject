@@ -63,7 +63,6 @@ const Profile = () => {
             const data = await response.json();
             toast.success("Profile updated successfully.", {
                 position: "bottom-right",
-                className: "toast-message",
                 autoClose: 3000,
             });
         } catch (error) {
