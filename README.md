@@ -62,9 +62,11 @@ Users can view a list of all available room rentals on the platform.
 
 Users can apply filters to narrow down their search results based on preferences.
 
-### Save Favorite Listings
+### Save Favorite Listings ✅
 
 Users can bookmark listings for easy access later.
+
+![favorites](https://github.com/user-attachments/assets/d5096dfc-78d4-4735-af45-a98527d47d39)
 
 ### View Detailed Listing Information ✅
 
