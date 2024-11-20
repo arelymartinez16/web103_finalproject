@@ -70,7 +70,6 @@ button {
   }
 }
 
-
 /* Modal background */
 .modal {
   position: fixed;
@@ -126,3 +125,6 @@ button {
   margin-top: 1rem;
 }
 
+.toast-message {
+  background-color: rgb(0, 0, 0);
+}
