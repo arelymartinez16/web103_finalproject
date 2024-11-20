@@ -131,6 +131,7 @@ const RoomListingDetailPage = () => {
             <p>Rent: {room.monthlyrent}</p>
             <p>Available: {room.status ? "Yes" : "No"}</p>
             <p>Type: {room.type}</p>
+            <p>Location: {room.location}</p>
           </Card>
         </div>
         <Card title="Description">
