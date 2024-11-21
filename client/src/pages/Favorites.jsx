@@ -12,7 +12,7 @@ const Favorites = ({ title }) => {
   useEffect(() => {
     const fetchFavorites = async () => {
       try {
-        const response = await fetch('http://localhost:3001/favorites', { credentials: 'include' });
+        const response = await fetch('https://web103finalproject-production.up.railway.app/favorites', { credentials: 'include' });
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

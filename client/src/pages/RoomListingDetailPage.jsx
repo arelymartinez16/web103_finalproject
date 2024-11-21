@@ -71,7 +71,7 @@ const RoomListingDetailPage = () => {
 
   const handleToggleFavorite = async () => {
     try {
-      const response = await fetch("http://localhost:3001/favorites/toggle", {
+      const response = await fetch("http://web103finalproject-production.up.railway.app/favorites/toggle", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_id: user.user_id, room_id: parseInt(id) }),
