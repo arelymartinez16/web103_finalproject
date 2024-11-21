@@ -4,7 +4,7 @@ import { pool } from './database.js';
 const options = {
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: 'https://web103_finalproject.railway.internal/auth/github/callback'
+    callbackURL: 'https://web103finalproject-production.up.railway.app/auth/github/callback'
 };
 
 const verify = async (accessToken, refreshToken, profile, done) => {
