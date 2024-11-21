@@ -4,7 +4,7 @@ CodePath WEB103 Final Project
 
 Designed and developed by: Arely Martinez, Chau Anh Nguyen, Mary Ramirez
 
-🔗 Link to deployed app:
+🔗 Link to deployed app: https://gallant-friendship-production.up.railway.app/
 
 ## About
 
