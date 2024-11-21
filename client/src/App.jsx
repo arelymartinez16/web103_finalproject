@@ -36,7 +36,7 @@ function App() {
   // Define routes and protect them based on user authentication
   let element = useRoutes([
     {
-    path: '/home',
+    path: '/',
     element: user && user.user_id?
         <Home user={user} /> : <Login api_url={API_URL} />
     },
