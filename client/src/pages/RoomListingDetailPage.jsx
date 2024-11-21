@@ -17,7 +17,7 @@ const RoomListingDetailPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [user, setUser] = useState(null);
-  const API_URL = 'http://localhost:3001';
+  const API_URL = process.env.NODE_ENV === 'production' ? 'https://web103finalproject-production.up.railway.app' : '';
 
   const handleConfirmDelete = () => {
     setIsModalOpen(true);

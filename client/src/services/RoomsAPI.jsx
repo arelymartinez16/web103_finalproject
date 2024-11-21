@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3001';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://web103finalproject-production.up.railway.app' : ''
 
 export const getRooms = async () => {
     const response = await fetch(`${API_URL}/rooms`);

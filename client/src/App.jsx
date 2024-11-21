@@ -12,7 +12,7 @@ import Profile from './pages/Profile'
 
 function App() {
   const [user, setUser] = useState(null);
-  const API_URL = 'http://localhost:3001';
+  const API_URL = process.env.NODE_ENV === 'production' ? 'https://web103finalproject-production.up.railway.app' : ''
 
   useEffect(() => {
     const getUser = async () => {
