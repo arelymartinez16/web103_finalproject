@@ -38,7 +38,7 @@ router.get('/github', passport.authenticate('github', { scope: [ 'read:user' ] }
 
 router.get('/github/callback', passport.authenticate('github', {
         successRedirect: 'https://gallant-friendship-production.up.railway.app/',
-        failureRedirect: '/',
+        failureRedirect: 'https://gallant-friendship-production.up.railway.app/login',
     })
 )
 
