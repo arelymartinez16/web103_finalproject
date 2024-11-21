@@ -27,7 +27,7 @@ app.use(session({
 
 app.use(express.json())
 app.use(cors({
-    origin: 'https://gallant-friendship-production.up.railway.app',
+    origin: process.env.NODE_ENV === 'production' ? 'https://your-production-url.com' : 'http://localhost:5173',
     methods: 'GET,POST,PUT,DELETE,PATCH',
     credentials: true
 }))
